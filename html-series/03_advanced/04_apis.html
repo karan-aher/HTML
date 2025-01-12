@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML APIs</title>
+</head>
+<body>
+    <h1>Introduction to HTML APIs</h1>
+    <p>HTML APIs provide additional functionality to web applications, allowing developers to interact with the browser and the user's device.</p>
+    
+    <h2>Geolocation API</h2>
+    <p>The Geolocation API allows the user’s location to be accessed. It can be used to provide location-based services.</p>
+    <pre><code>
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+function successCallback(position) {
+    console.log('Latitude: ' + position.coords.latitude);
+    console.log('Longitude: ' + position.coords.longitude);
+}
+
+function errorCallback(error) {
+    console.error('Error occurred. Error code: ' + error.code);
+}
+    </code></pre>
+
+    <h2>Web Storage API</h2>
+    <p>The Web Storage API provides storage that is accessible within the user's browser. It includes two types: local storage and session storage.</p>
+    <pre><code>
+// Storing data
+localStorage.setItem('key', 'value');
+sessionStorage.setItem('sessionKey', 'sessionValue');
+
+// Retrieving data
+let value = localStorage.getItem('key');
+let sessionValue = sessionStorage.getItem('sessionKey');
+
+// Removing data
+localStorage.removeItem('key');
+sessionStorage.removeItem('sessionKey');
+    </code></pre>
+
+    <h2>Conclusion</h2>
+    <p>HTML APIs enhance the capabilities of web applications, making them more interactive and user-friendly.</p>
+</body>
+</html>
